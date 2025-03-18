@@ -6,6 +6,58 @@ import Card from "@/components/Card"
 const nome = "Marlon Aguirre"
 let canal = "DevFishman"
 
+// produtos será um array de objetos
+// cada objeto representa um produto
+const produtos = [
+
+  {
+    produto: 'Mouse',
+    valor: 49.90,
+    desconto: 0,
+    disponivel: true
+  },
+  {
+    produto: 'Teclado',
+    valor: 69.90,
+    desconto: 0,
+    disponivel: true
+  },
+  {
+    produto: 'CPU',
+    valor: 829.90,
+    desconto: 0,
+    disponivel: true
+  },
+  {
+    produto: 'MOnitor',
+    valor: 659.90,
+    desconto: 0,
+    disponivel: true
+  },
+  {
+    produto: 'Cx de som',
+    valor: 39.90,
+    desconto: 0,
+    disponivel: true
+  },
+  {
+    produto: 'Microfone',
+    valor: 65.00,
+    desconto: 0,
+    disponivel: true
+  },
+
+]
+
+function caldDesc(v: number, d: number) {
+  return v - d
+}
+
+function caldDesc2(v: number, d: number) {
+  return v - (d / 2)
+}
+
+
 
 export default function Home() {
   return (
@@ -17,10 +69,16 @@ export default function Home() {
         <div style={{ color: '#f00', backgroundColor: '#bbb' }}>React</div>
       </div>
       <div className="flex justify-center gap-3">
-        <Card produto={'Mouse'} valor={'R$49,90'}/>
-        <Card produto={'Teclado'} valor={'R69,90'}/>
-        <Card produto={'Monitor'} valor={'R$459,90'}/>
-        <Card produto={'CPU'} valor={'R$799,90'}/>
+        {
+          produtos.map((e: any) => {
+            if (e.disponivel) {
+              return (
+                <Card produto={e.produto} valor={e.valor} desconto={e.desconto} funcao={caldDesc} />
+              )
+            }
+          })
+        }
+
       </div>
     </div>
 
