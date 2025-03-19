@@ -3,6 +3,7 @@ interface CardProps{
     valor:number,
     desconto:number,
     funcao:any
+    children:any
 }
 
 //onde tem desconto borda vermelha, onde tem desconto borda azul.
@@ -18,6 +19,7 @@ export default function Card (props:CardProps){
             </div>
         )
         }
+        <div>{props.children[0]}</div>
         
         </div>
         
