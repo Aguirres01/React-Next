@@ -57,9 +57,6 @@ function caldDesc(v: number, d: number) {
     return v - d
 }
 
-function caldDesc2(v: number, d: number) {
-    return v - (d / 2)
-}
 
 
 export default function ProdutosPagina() {
@@ -72,7 +69,7 @@ export default function ProdutosPagina() {
 
             <div className="flex justify-center gap-3">
                 {
-                    produtos.map((e: any) => {
+                    produtos.map((e: { id: number; produto: string; valor: number; desconto: number; disponivel: boolean }) => {
                         if (e.disponivel) {
                             return (
                                 <Card key={e.id} produto={e.produto} valor={e.valor} desconto={e.desconto} funcao={caldDesc}>  

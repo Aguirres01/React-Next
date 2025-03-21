@@ -2,8 +2,8 @@ interface CardProps{
     produto:string,
     valor:number,
     desconto:number,
-    funcao:any
-    children:any
+    funcao: (valor: number, desconto: number) => number;    
+    children: React.ReactNode;
 }
 
 //onde tem desconto borda vermelha, onde tem desconto borda azul.
@@ -19,7 +19,7 @@ export default function Card (props:CardProps){
             </div>
         )
         }
-        <div>{props.children[0]}</div>
+        <div>{props.children}</div>
         
         </div>
         

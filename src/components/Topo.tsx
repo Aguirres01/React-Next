@@ -1,5 +1,8 @@
 import Link from "next/link";
 
+
+
+
 export default function Topo() {
     return (
         <div className='flex flex-col justify-between items-center bg-zinc-300 h-[140px]'>
@@ -14,7 +17,7 @@ export default function Topo() {
                 </Link>
                 <Link href={
                     {
-                        pathname:'/produtos/produtos',
+                        pathname:'/produtos/Produtos',
                         query:{
                             nome:'Marlon', 
                             curso: 'React'}
@@ -22,12 +25,24 @@ export default function Topo() {
                     }>
                     Produtos
                 </Link>
-                <Link href={'/teste/teste'}>
+                <Link href={'/teste/Teste'}>
                     Teste
                 </Link>
-                <Link href={'/usestate/usestate'}>
+                <Link href={'/usestate/Usestate'}>
                     Usestate
                 </Link>
+                <Link href={'/useeffect/Useeffect'}>
+                    UseEffect
+                </Link>
+
+                <Link href={'/inputs/Inputs'}>
+                    Inputs
+                </Link>
+
+                <Link href={'/filtragem/Filtragem'}>
+                    Filtragem
+                </Link>
+                
                
             </nav>
         </div>

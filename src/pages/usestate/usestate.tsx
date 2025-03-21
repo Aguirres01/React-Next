@@ -1,25 +1,20 @@
 import { useState } from "react"
 import DisplayState from "@/components/DisplayState"
+import Topo from "@/components/Topo"
 
-export default function usestate(){
+export default function Usestate(){
     const [cont, setCont] = useState<number>(0)
 
 
-    function adicionar(){
-       let c=cont
-       c++
-       setCont(c)
-    }
-    function subtrair(){
-        let c=cont
-        c--
-        setCont(c)
-    }
-
+  
     return(
         <div>
+            <div>
+                <Topo/>
+            </div>
             usestate
-            <DisplayState valor={cont} fadicionar={adicionar} fsubtrair={subtrair}></DisplayState>
+            <DisplayState valor={cont} fvalor={setCont}></DisplayState>
+            
         </div>
     )
 }

@@ -1,10 +1,7 @@
 //import Image from "next/image";
 //import { Geist, Geist_Mono } from "next/font/google";
 import Topo from "@/components/Topo"
-import Card from "@/components/Card"
 
-const nome = "Marlon Aguirre"
-let canal = "DevFishman"
 
 
 
